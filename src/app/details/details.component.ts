@@ -8,7 +8,7 @@ import { DetailsService } from '../shared/details.service';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private service:DetailsService) { }
+  constructor(public service:DetailsService) { }
 
   ngOnInit(): void {
   }
