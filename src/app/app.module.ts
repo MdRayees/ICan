@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
+
 import { AppComponent } from './app.component';
 import { FixComponent } from './fix/fix.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddComponent } from './add/add.component';
 import { DetailsComponent } from './details/details.component';
 import { DetailsService } from './shared/details.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -40,14 +43,17 @@ import { DetailsService } from './shared/details.service';
     MatDialogModule,
     MatPaginatorModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatGridListModule
+
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [ICanService,DetailsService],
   bootstrap: [AppComponent],
-  entryComponents:[AddComponent]
+  entryComponents:[DetailsComponent]
   
 })
 export class AppModule { }

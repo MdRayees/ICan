@@ -1,1 +1,16 @@
-
+<form [formGroup]="detailsForm" class = "normal-form">
+    <mat-grid-list cols="2" rowHeight="500px">
+        <mat-grid-title>
+            <div class ="controles-container">
+                <input type="hidden" formControlName="$key">
+                <mat-form-field>
+                    <input formControlName = "title" matInput placeholder="title">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <input formControlName = "description" matInput placeholder="description">
+                </mat-form-field>
+            </div>
+        </mat-grid-title>
+    </mat-grid-list>
+</form>

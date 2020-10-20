@@ -8,7 +8,7 @@ export class DetailsService {
 
   constructor() { }
 
-  form:FormGroup = new FormGroup({
+  detailsForm = new FormGroup({
     $key: new FormControl(null),
     title: new FormControl(''),
     description: new FormControl('')

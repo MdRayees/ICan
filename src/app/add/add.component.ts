@@ -11,9 +11,7 @@ export class AddComponent {
   
   constructor(private dialog:MatDialog){}
 
-
   onAdd(){
     this.dialog.open(DetailsComponent);
-
-  }
+    }
 }
