@@ -13,7 +13,7 @@ export class AddComponent {
 
   onAdd(){
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "60%";
     this.dialog.open(DetailsComponent,dialogConfig);

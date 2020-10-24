@@ -18,8 +18,8 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.myForm = new FormGroup({
       //PMId:new FormControl(),
-      Title:new FormControl('Nokia'),
-      Description: new FormControl('very old phone')
+      Title:new FormControl(''),
+      Description: new FormControl('')
     })
   }
 

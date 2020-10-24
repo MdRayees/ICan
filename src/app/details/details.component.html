@@ -2,16 +2,16 @@
     <mat-grid-list cols = "2" >
         <mat-grid-title>
             <div class ="controles-container">
-                <!--
-                <input type="hidden" formControlName="PMId">
-                -->
-                <mat-form-field>
-                    <input type="text" formControlName="Title">
+                <mat-form-field >
+                    <h3>Title</h3>
+                    
+                    <input type="text" formControlName="Title" matInput placeholder="Enter the title here">
                 </mat-form-field>
                 <br>
                 <div class="space-between"></div>
                 <mat-form-field>
-                    <input type="text" formControlName="Description">
+                    <h3>Description</h3>
+                    <input type="text" formControlName="Description" matInput placeholder="Enter the description here">
                     
                 </mat-form-field>
             </div>
@@ -23,6 +23,3 @@
 </form>
 
 
-<!--
-    <input formControlName = "description" matInput placeholder="description">
--->
