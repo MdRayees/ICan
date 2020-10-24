@@ -1,15 +1,18 @@
-<form [formGroup]="service.form"  class="normal-form">
-    <mat-grid-list >
+<form [formGroup]="myForm"  class="normal-form" (ngSubmit)="onSubmit(myForm)">
+    <mat-grid-list cols = "2" >
         <mat-grid-title>
             <div class ="controles-container">
-                <input type="hidden" formControlName="$key">
+                <!--
+                <input type="hidden" formControlName="PMId">
+                -->
                 <mat-form-field>
-                    <input formControlName = "title" matInput placeholder="title">
+                    <input type="text" formControlName="Title">
                 </mat-form-field>
                 <br>
                 <div class="space-between"></div>
                 <mat-form-field>
-                    <input formControlName = "description" matInput placeholder="description">
+                    <input type="text" formControlName="Description">
+                    
                 </mat-form-field>
             </div>
             <div class = "button-row">
@@ -18,3 +21,8 @@
         </mat-grid-title>
     </mat-grid-list>
 </form>
+
+
+<!--
+    <input formControlName = "description" matInput placeholder="description">
+-->

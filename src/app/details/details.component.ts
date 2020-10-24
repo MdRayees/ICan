@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { DetailsService } from '../shared/details.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-details',
@@ -8,9 +10,28 @@ import { DetailsService } from '../shared/details.service';
 })
 export class DetailsComponent implements OnInit {
 
+  myForm: FormGroup;
+
   constructor(public service:DetailsService) { }
 
-  ngOnInit(): void {
+  
+  ngOnInit() {
+    this.myForm = new FormGroup({
+      //PMId:new FormControl(),
+      Title:new FormControl('Nokia'),
+      Description: new FormControl('very old phone')
+    })
   }
+
+  onSubmit(myForm){
+    this.service.postDetails(myForm.value).subscribe(
+      res => {},
+      err => {
+        console.log(err);
+      }
+    )
+  }
+   
+
 
 }

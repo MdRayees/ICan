@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddComponent } from './add/add.component';
 import { DetailsComponent } from './details/details.component';
 import { DetailsService } from './shared/details.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 
@@ -45,7 +45,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatTableModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule
 
   ],
   schemas: [
